@@ -1,4 +1,4 @@
-# Aplicação de Bloco de Notas
+# Aplicação NotesApp
 
 ## Escopo do Projeto
 Desenvolver uma aplicação de bloco de notas que permita ao usuário criar, editar e armazenar suas notas de maneira segura, utilizando autenticação JWT. O backend será construído em Node.js, com MongoDB para armazenamento de dados e React para interface do usuário. O foco é oferecer uma solução intuitiva, segura e responsiva para gerenciar notas pessoais.
