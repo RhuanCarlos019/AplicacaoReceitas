@@ -33,14 +33,13 @@ Desenvolver uma aplicação de bloco de notas que permita ao usuário criar, edi
 ## Diagramas
 
 ### Diagrama de Classes
-- **Usuário**: id, nome, email, senha.
-- **Nota**: id, título, conteúdo, data de criação, data de modificação, id_usuário.
-- **Autenticação JWT**: token, id_usuário.
+<img width="740" alt="DiagramaClasse" src="https://github.com/user-attachments/assets/2d409429-dd12-4f36-9300-1e305a667ef9">
+
 
 ### Diagrama de Caso de Uso
-1. **Usuário**: Cadastro, login, criação de nota, edição de nota, exclusão de nota.
-2. **Sistema**: Autenticar usuário, armazenar notas, garantir acesso seguro.
+<img width="206" alt="DiagramaUSO" src="https://github.com/user-attachments/assets/af9500ed-8af3-49bc-9dc0-4a72d90a0aaa">
+
 
 ### Diagrama de Fluxo
-1. **Fluxo de Cadastro/Login**: Usuário -> Frontend -> Backend -> Banco de Dados -> JWT gerado -> Resposta ao Frontend.
-2. **Fluxo de CRUD de Notas**: Usuário autenticado -> Frontend -> Backend -> MongoDB -> Notas salvas/recuperadas.
+<img width="310" alt="DiagramaFluxo" src="https://github.com/user-attachments/assets/343239bf-8ddf-489f-9b58-fb6598ee2b41">
+
