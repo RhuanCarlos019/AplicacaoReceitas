@@ -29,7 +29,6 @@ Desenvolver uma aplicação de bloco de notas que permita ao usuário criar, edi
 ## Recursos
 - **Pessoas**: 1 desenvolvedor full-stack, 1 designer UX/UI, 1 QA tester.
 - **Tecnologia**: Node.js, MongoDB, React, JWT, Figma (prototipagem).
-- **Infraestrutura**: Servidores em nuvem (Heroku, AWS), GitHub para controle de versão.
 
 ## Diagramas
 
