@@ -10,7 +10,7 @@ Desenvolver uma aplicação de bloco de notas que permita ao usuário criar, edi
 - **Relevante**: Fornecer uma ferramenta segura e prática para gerenciamento de notas pessoais.
 - **Temporal**: Lançar a versão inicial em 90 dias.
 
-## Cronograma - Diagrama Gantt
+## Cronograma
 
 | Fase                     | Duração  | Início      | Término      |
 | ------------------------ | -------- | ----------- | ------------ |
