@@ -64,4 +64,5 @@ O projeto visa desenvolver uma aplicação web que permita aos usuários criar, 
 ![ReceitasMediaFidelidade](https://github.com/user-attachments/assets/2ee00f7e-c81a-4412-a119-4970b3055af4)
 
 ### Alta Fidelidade
-Link Imagem
+![ReceitasAltaFidelidade](https://github.com/user-attachments/assets/ac8783a7-a35e-4207-ad15-daaf3b30a2de)
+
