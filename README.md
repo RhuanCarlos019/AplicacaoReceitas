@@ -45,10 +45,13 @@ O projeto visa desenvolver uma aplicação web que permita aos usuários criar, 
 ## Diagramas
 
 ### Diagrama de Classes
-- Descreverá as relações entre os componentes principais, como Usuário, Receita, Ingrediente, e Categoria.
+<img width="104" alt="image" src="https://github.com/user-attachments/assets/c91bf8a8-a691-4d18-bbfb-65e11c8a311f">
 
-### Diagrama de Caso de Uso
-- Representará as interações do usuário com o sistema, incluindo casos como "Criar Receita", "Editar Receita", "Excluir Receita" e "Salvar Preferências".
+
+### Diagrama de Uso
+<img width="264" alt="image" src="https://github.com/user-attachments/assets/7f0fe95f-8985-436c-85f3-7297c689d3a2">
+
 
 ### Diagrama de Fluxo
-- Ilustrará o fluxo de dados e requisições entre frontend, backend e banco de dados, incluindo o processo de autenticação JWT.
+<img width="268" alt="image" src="https://github.com/user-attachments/assets/b7ae0ed3-f5b9-42a5-9cd5-074601877992">
+
