@@ -55,3 +55,13 @@ O projeto visa desenvolver uma aplicação web que permita aos usuários criar, 
 ### Diagrama de Fluxo
 <img width="268" alt="image" src="https://github.com/user-attachments/assets/b7ae0ed3-f5b9-42a5-9cd5-074601877992">
 
+## Prototipagem
+
+### Baixa Fidelidade
+![ReceitasBaixaFidelidade](https://github.com/user-attachments/assets/984fb9c0-0eb1-4a68-95bb-ffc8741842ae)
+
+### Média Fidelidade
+Link imagem
+
+### Alta Fidelidade
+Link Imagem
