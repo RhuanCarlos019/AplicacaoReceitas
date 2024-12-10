@@ -1,69 +1,194 @@
-# Documentação do Projeto: Aplicação de Gerenciamento de Receitas
+# Escopo
 
-## Escopo do Projeto
-O projeto visa desenvolver uma aplicação web que permita aos usuários criar, editar, visualizar e excluir receitas culinárias de forma intuitiva e organizada. A aplicação oferecerá funcionalidades para categorização de receitas, inclusão de ingredientes e instruções, além de possibilitar a configuração de preferências alimentares. A segurança será garantida por meio de autenticação JWT, enquanto o armazenamento de dados será feito com MongoDB. A interface será desenvolvida utilizando React, e o backend será construído com Node.js.
-
-## Objetivos SMART
-
-- **Específico:** Criar uma aplicação de gerenciamento de receitas que permita criar, editar, visualizar e excluir receitas, categorizá-las e adicionar preferências alimentares, com segurança por autenticação JWT.
-  
-- **Mensurável:** O sucesso será medido pela implementação das funcionalidades principais de CRUD de receitas, categorização e autenticação JWT.
-  
-- **Atingível:** A aplicação será desenvolvida em 3 meses, utilizando Node.js, React, MongoDB e JWT.
-  
-- **Relevante:** Oferecer uma ferramenta que facilite a organização e gestão de receitas pessoais de forma prática e segura.
-  
-- **Temporal:** Lançar a versão inicial da aplicação em 90 dias.
-
-## Cronograma
-
-| Fase                     | Duração    | Início      | Término     |
-|--------------------------|------------|-------------|-------------|
-| Planejamento              | 1 semana   | 01/09/2024  | 07/09/2024  |
-| Configuração do Backend   | 3 semanas  | 08/09/2024  | 28/09/2024  |
-| Configuração do Frontend  | 3 semanas  | 29/09/2024  | 19/10/2024  |
-| Integração do Sistema     | 2 semanas  | 20/10/2024  | 03/11/2024  |
-| Testes e QA               | 2 semanas  | 04/11/2024  | 17/11/2024  |
-| Lançamento                | 1 semana   | 18/11/2024  | 24/11/2024  |
-
-## Análise de Risco
-
-- **Riscos Técnicos:** A integração da autenticação JWT pode ser vulnerável a falhas de segurança.  
-  **Mitigação:** Implementar práticas de segurança recomendadas, como criptografia de senhas, tokens de acesso com validade curta, e proteção contra ataques CSRF.
-  
-- **Riscos de Prazo:** Possíveis atrasos devido a bugs inesperados durante a integração de funcionalidades.  
-  **Mitigação:** Implementar testes contínuos ao longo do desenvolvimento, com foco em testes unitários e de integração.
-  
-- **Riscos Financeiros:** Custos com servidores e infraestrutura em nuvem para o ambiente de produção.  
-  **Mitigação:** Começar com soluções de hospedagem gratuitas ou de baixo custo, como Heroku ou Netlify.
-
-## Recursos
-
-- **Pessoas:** 1 desenvolvedor full-stack, 1 designer UX/UI, 1 QA tester.
-- **Tecnologia:** Node.js, MongoDB, React, JWT, Figma (para prototipagem e design).
-  
-## Diagramas
-
-### Diagrama de Classes
-<img width="104" alt="image" src="https://github.com/user-attachments/assets/c91bf8a8-a691-4d18-bbfb-65e11c8a311f">
+Desenvolver uma aplicação web completa para gerenciar uma biblioteca, permitindo que bibliotecários cadastrem e gerenciem livros, e que usuários cadastrados possam buscar, alugar e devolver livros. A aplicação deve incluir um sistema de cadastro e autenticação para bibliotecários e usuários, bem como funcionalidades de notificação para facilitar a comunicação entre todos os envolvidos.
 
 
-### Diagrama de Uso
-<img width="264" alt="image" src="https://github.com/user-attachments/assets/7f0fe95f-8985-436c-85f3-7297c689d3a2">
+# Funcionalidades
+
+- ## Cadastro e autenticação
+    ### Cadastro de Bibliotecários
+    Permitir que novos bibliotecários se registrem com informações como nome, email, senha e cargo.
+	#### Funcionalidades:
+	- Formulário de registro
+	- Validação de dados
+	- Confirmação de registro por email
+	- Interface para login e recuperação de senha
+
+- ## Gestão de livros
+    ### CRUD de Livros
+	Bibliotecários podem criar, ler, atualizar e excluir livros do catálogo.
+	#### Funcionalidades:
+    - Formulários para adicionar e editar livros (campos: título, autor, gênero, ano de publicação, ISBN, número de cópias disponíveis).
+    - Interface para visualizar detalhes dos livros.
+    - Função para remover livros do catálogo.
+
+    ### Busca e filtragem de Livros
+	Usuários podem buscar livros por título, autor, gênero, e outros critérios.
+	#### Funcionalidades:
+    - Barra de busca por texto livre.
+    - Filtros avançados por gênero, classificação, data de publicação, etc.
+    - Resultados da busca exibidos em uma lista com informações resumidas.
+
+- ## Aluguel de livros
+    ### Solicitação de empréstimo
+	Usuários podem solicitar o aluguel de livros disponíveis.
+	#### Funcionalidades:
+    - Interface para solicitar empréstimo com opções de data de início e fim.
+    - Verificação da disponibilidade do livro antes da confirmação do empréstimo.
+
+    ### Registro de devolução
+	Bibliotecários podem registrar a devolução dos livros emprestados.
+	#### Funcionalidades:
+    - Interface para registrar a devolução.
+    - Atualização do status do livro para "Disponível".
 
 
-### Diagrama de Fluxo
-<img width="268" alt="image" src="https://github.com/user-attachments/assets/b7ae0ed3-f5b9-42a5-9cd5-074601877992">
+    ### Histórico de empréstimo
+	Usuários e bibliotecários podem visualizar o histórico de empréstimos.
+	#### Funcionalidades:
+    - Listagem de livros emprestados, incluindo datas de empréstimo e devolução.
 
-## Prototipagem
+- ## Notificações e comunicação
+    ### Notificações para bibliotecário
+	Notificar bibliotecários quando um livro for alugado.
+	#### Funcionalidades:
+    - E-mail ou notificação dentro da aplicação com detalhes sobre o livro e o usuário.
 
-### Baixa Fidelidade
-![ReceitasBaixaFidelidade](https://github.com/user-attachments/assets/984fb9c0-0eb1-4a68-95bb-ffc8741842ae)
+    ### Notificações para usuários
+	Notificar usuários sobre datas de devolução, livros novos e bem avaliados.
+	#### Funcionalidades:
+    - E-mails ou notificações na aplicação com lembretes de devolução, novos livros e recomendações baseadas em avaliações.
 
-### Média Fidelidade
-![ReceitasMediaFidelidade](https://github.com/user-attachments/assets/2ee00f7e-c81a-4412-a119-4970b3055af4)
+- ## Administração
+    ### Gestão de Usuários e Bibliotecários
+    Administradores podem gerenciar contas de usuários e bibliotecários.
+    #### Funcionalidades:
+    - Interface para adicionar, editar e excluir usuários e bibliotecários.
+    - Gerenciamento de permissões e papéis.
 
-### Alta Fidelidade
-![ReceitasAltaFidelidade (1)](https://github.com/user-attachments/assets/65cffb5c-2874-42f0-9649-303a1114f8ee)
+    ### Relatórios e análises
+    Administradores podem gerar relatórios sobre o uso do sistema, como número de livros emprestados, taxas de devolução, etc.
+    #### Funcionalidades:
+    - Ferramentas de geração de relatórios e visualização de estatísticas.
 
 
+# Objetivos SMART do Projeto
+- ## Gerenciamento do Catálogo de Livros
+    - ### Específico:
+    Permitir que administradores realizem operações CRUD (Criar, Ler, Atualizar, Deletar) no catálogo de livros.
+    - ### Mensurável:
+    O sistema deve permitir adicionar, editar e remover pelo menos 100 livros e exibir uma lista com informações detalhadas sobre cada um.
+    - ### Atingível:
+        Utilizando o Laravel Framework para desenvolver a interface e PostgreSQL para armazenar os dados dos livros.
+    - ### Relevante:
+        Facilita a manutenção e atualização do catálogo de livros disponível para empréstimo.
+    - ### Temporal:
+        Deve ser concluído na etapa de "Implementação do CRUD para Livros" do cronograma, com duração de 3 semanas.
+
+- ## Interface de Empréstimo e Devolução
+    - ### Específico:
+        Implementar uma interface que permita aos usuários solicitar empréstimos e aos administradores registrar a devolução de livros.
+    - ### Mensurável:
+        O sistema deve permitir a gestão de até 500 transações de empréstimo e devolução por mês.
+    - ### Atingível:
+        Desenvolver as funcionalidades usando Laravel para a lógica de aplicação e PostgreSQL para o armazenamento dos dados.
+    - ### Relevante:
+        Melhora a eficiência na gestão dos livros emprestados e devolvidos, reduzindo erros e facilitando o controle.
+    - ### Temporal:
+        Deve ser concluído na etapa de "Implementação do Sistema de Empréstimo e Devolução" do cronograma, com duração de 3 semanas.
+- ## Sistema de Registro e Login
+    - ### Específico:
+        Criar um sistema de autenticação para administradores e usuários, com níveis de acesso diferenciados.
+    - ### Mensurável:
+        Implementar um sistema que permita o registro e login de pelo menos 100 administradores e 500 usuários.
+    - ### Atingível:
+        Utilizar o Laravel Framework para o sistema de autenticação e PostgreSQL para armazenar credenciais e perfis de usuários.
+    - ### Relevante:
+        Garantir que apenas usuários autorizados possam acessar e manipular informações críticas do sistema.
+    - ### Temporal:
+        Deve ser concluído na etapa de "Implementação do CRUD para Usuários" do cronograma, com duração de 2 semanas.
+
+# Cronograma detalhado
+- ## Análise de Requisitos e Modelagem (2 semanas)
+    - ### Específico:
+        Levantar todos os requisitos do sistema e criar os diagramas necessários.
+    - ### Mensurável:
+        Produzir e validar todos os diagramas (Classe, Uso, Fluxo) e documentar requisitos.
+    - ### Atingível:
+        Baseado nas informações fornecidas e nas reuniões com stakeholders.
+    - ### Relevante:
+        A análise e modelagem adequadas são fundamentais para o sucesso do projeto.
+    - ### Temporal:
+        Concluído até o final da 2ª semana após o início do projeto.
+
+- ## Implementação do CRUD para Livros (3 semanas)
+    - ### Específico:
+        Desenvolver funcionalidades para gerenciamento do catálogo de livros.
+    - ### Mensurável:
+        Implementar operações CRUD para pelo menos 100 livros e garantir que todas as funcionalidades estejam funcionando corretamente.
+    - ### Atingível:
+        Utilizar Laravel para desenvolvimento e PostgreSQL para o banco de dados.
+    - ### Relevante:
+        Fundamental para o gerenciamento do catálogo de livros.
+    - ### Temporal:
+        Concluído até o final da 5ª semana após o início do projeto.
+
+- ## Implementação do CRUD para Usuários (2 semanas)
+    - ### Específico:
+        Desenvolver funcionalidades para gerenciamento de usuários.
+    - ### Mensurável:
+        Implementar operações CRUD para pelo menos 500 usuários.
+    - ### Atingível:
+        Usar Laravel para desenvolvimento e PostgreSQL para armazenamento.
+    - ### Relevante:
+        Essencial para a gestão de contas e acessos.
+    - ### Temporal:
+        Concluído até o final da 7ª semana após o início do projeto.
+
+- ## Implementação do Sistema de Empréstimo e Devolução (3 semanas)
+    - ### Específico: 
+        Desenvolver funcionalidades para registro de empréstimos e devoluções de livros.
+    - ### Mensurável:
+        Implementar um sistema que suporte até 500 transações de empréstimo e devolução por mês.
+    - ### Atingível:
+        Utilizar Laravel para a lógica de aplicação e PostgreSQL para dados de transações.
+    - ### Relevante:
+        Crucial para o controle e gestão de livros emprestados.
+    - ### Temporal:
+        Concluído até o final da 10ª semana após o início do projeto.
+
+- ## Documentação e Entrega (2 semanas)
+    - ### Específico: 
+        Criar toda a documentação técnica e de usuário e realizar a entrega final do projeto.
+    - ### Mensurável: 
+        Completar e revisar a documentação e realizar uma apresentação formal para a entrega.
+    - ### Atingível: 
+        Baseado na documentação gerada durante o desenvolvimento e na experiência da equipe.
+    - ### Relevante: 
+        Garantir que o sistema esteja bem documentado e compreendido pelos usuários finais.
+    - ### Temporal: 
+        Concluído até o final da 12ª semana após o início do projeto.
+
+# Recursos
+- ## Framework: Laravel
+- ## Banco de Dados: PostgreSQL
+- ## Outros: Ferramenta de versionamento de código (Git).
+
+# Análise de Riscos
+- ## Risco de Segurança de Dados dos Usuários
+    - ### Mitigação: 
+        Implementar autenticação segura, criptografia e práticas recomendadas de segurança de dados.
+- ## Falhas na Implementação de Regras de Negócio
+    - ### Mitigação: 
+        Realizar testes rigorosos e validação das regras de negócio durante o desenvolvimento.
+- ## Complexidade na Gestão de Estados de Empréstimos
+    - ### Mitigação: 
+        Planejar cuidadosamente a lógica de gestão de estados e realizar testes detalhados.
+
+# Diagramas
+- ## Diagrama de Classe
+    ![Diagrama de classe](https://i.postimg.cc/MKTR4T7d/Diagrama-de-classes.png)
+- ## Diagrama de Fluxo
+    ![Diagrama de fluxo](https://i.postimg.cc/5NRvMVp1/Diagrama-de-fluxo.png)
+- ## Diagrama de Uso
+    ![Diagrama de uso](https://i.postimg.cc/s2XgfQ2N/Diagrama-de-uso.png)
